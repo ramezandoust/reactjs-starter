@@ -1,0 +1,49 @@
+.toggle-theme {
+  position: relative;
+  display: flex;
+  height: 20px;
+  width: 30px;
+  margin-inline: 0.75em;
+
+  input {
+    display: none;
+
+    &:checked + .slider .iconBg {
+      left: calc(100% - 0.75em);
+    }
+
+    &:checked + .slider {
+      background-color: cornflowerblue;
+    }
+  }
+
+  .slider {
+    background-color: #ccc;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 0.4s;
+
+    .iconBg {
+      color: var(--background-color);
+      background-color: var(--foreground-color);
+
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 50%;
+      position: absolute;
+      bottom: calc(50% - (0.75em));
+      left: -0.75em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s;
+
+      i {
+        font-size: 1em;
+      }
+    }
+  }
+}

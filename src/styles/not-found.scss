@@ -1,0 +1,61 @@
+@import "./config/mixin.scss";
+
+.not-found {
+  height: 100vh;
+  background-color: var(--background-color-404);
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  .heading {
+    font-size: 7rem;
+    margin-bottom: 0;
+    background: -webkit-linear-gradient(var(--foreground-color-404), var(--background-color-404));
+    animation: light-on 1s infinite alternate ease-in;
+    text-shadow: 0px 0px 30px rgba(#000, 0.3);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    .not-found-zero {
+      background: -webkit-linear-gradient(yellow, red);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .desc,
+  button {
+    text-transform: capitalize;
+  }
+
+  a {
+    color: #f7f7f7;
+    &:hover {
+      color: orange;
+    }
+    user-select: none;
+  }
+}
+
+@keyframes light-on {
+  0% {
+    filter: brightness(100%);
+  }
+  20% {
+    filter: brightness(110%);
+  }
+  50% {
+    filter: brightness(105%);
+  }
+  75% {
+    filter: brightness(115%);
+  }
+  100% {
+    filter: brightness(120%);
+  }
+}

@@ -1,0 +1,17 @@
+.layout {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  main {
+    min-height: calc(100vh - 8rem);
+    height: 100%;
+  }
+
+  &.full-page {
+    main {
+      min-height: 100vh;
+      height: 100%;
+    }
+  }
+}

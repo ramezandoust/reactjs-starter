@@ -1,0 +1,36 @@
+@import "./config/mixin.scss";
+
+.auth {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    @include defaultText($font: inherit, $size: 32px, $weight: 700);
+  }
+
+  .form {
+    padding: 2em;
+    border: 1px solid;
+    border-radius: 1em;
+    background-color: var(--background-color-2);
+    border-color: var(--border-color);
+
+    label {
+      color: var(--foreground-color);
+    }
+
+    .submit {
+      text-align: center;
+    }
+  }
+}
+
+@import "./responsive/auth.responsive.scss";

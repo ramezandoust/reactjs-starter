@@ -1,0 +1,62 @@
+@import "../assets/fonts/fontawesome/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;700&family=Roboto+Mono:wght@300;400;500;700&family=Vazirmatn:wght@300;400;500;700&display=swap");
+@import "./config/variables.scss";
+@import "./config/mixin.scss";
+@import "./config/animations.scss";
+
+:root {
+  --background-color: #f7f7f7;
+  --foreground-color: #1e1e1e;
+  --border-color: #eeeeee;
+
+  --hover-bg: rgba(0, 0, 0, 0.1);
+  --background-color-2: #fafafa;
+  --background-color-404: #004b9f;
+  --foreground-color-404: #9cc0e7;
+}
+[data-theme="dark"] {
+  --background-color: #1e1e1e;
+  --foreground-color: #f7f7f7;
+  --border-color: #333;
+
+  --hover-bg: rgba(92, 92, 92, 0.6);
+  --background-color-2: #2c2c2c;
+  --background-color-404: #2c2c2c;
+  --foreground-color-404: #f7f7f7;
+}
+
+html[dir="rtl"] {
+  @import "./rtl.scss";
+}
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  border-color: var(--border-color);
+  transition: all 0.3s ease;
+  @include defaultText;
+
+  .fade-in {
+    animation: fade-in 500ms forwards;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--foreground-color);
+  }
+
+  input:not(.file-filter input, [type="radio"]),
+  select {
+    background-color: var(--background-color-2) !important;
+    color: var(--foreground-color) !important;
+    * {
+      color: var(--foreground-color) !important;
+    }
+    @include defaultBorder();
+  }
+}
+
+@import "./responsive/global.responsive.scss";

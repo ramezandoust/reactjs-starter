@@ -1,0 +1,140 @@
+.header-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: transparent;
+  color: var(--foreground-color);
+
+  .navbar {
+    height: 100%;
+    background-color: transparent !important;
+
+    .navbar-brand {
+      margin-inline-end: 1.5em;
+      img {
+        width: 160px;
+      }
+    }
+
+    .navbar-collapse {
+      flex: 0 0;
+
+      .nav-tools {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        .theme-switcher {
+          margin-inline-start: 0.75em;
+        }
+        .lang-switcher {
+          margin-inline-start: 0.75em;
+        }
+
+        .auth {
+          margin-inline-start: 0.75em;
+          color: rgb(209, 9, 9);
+          font-weight: bold;
+          cursor: pointer;
+
+          &:hover {
+            color: rgb(97, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Larger devices (desktops, large than 1800px */
+@media screen and (min-width: 1799.99px) {
+}
+
+/* Larger devices (desktops, less than 1800px */
+@media screen and (max-width: 1799.98px) {
+}
+
+/* Larger devices (desktops, less than 1600px) */
+@media screen and (max-width: 1599.98px) {
+}
+
+/* Large devices (desktops, less than 1400px) */
+@media screen and (max-width: 1399.98px) {
+}
+
+/* Large devices (desktops, less than 1300px) */
+@media screen and (max-width: 1299.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1199.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media screen and (max-width: 991.98px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+  .header-full {
+    .navbar {
+      height: auto;
+
+      .container-fluid {
+        padding: 0;
+
+        .navbar-toggler {
+          background-color: var(--background-color);
+        }
+
+        .navbar-brand {
+          margin-inline-start: 1em;
+        }
+        .navbar-toggler {
+          margin-inline-end: 1em;
+        }
+
+        .navbar-collapse {
+          flex: auto;
+          background-color: var(--background-color);
+          border-bottom: 1px solid var(--border-color);
+          z-index: 100;
+          margin-top: 0.3em;
+          width: 100%;
+
+          .form-select {
+            margin: auto;
+            margin-top: 1.3em;
+            width: 10rem;
+          }
+        }
+
+        .nav-tools {
+          justify-content: center;
+          margin-bottom: 1rem;
+
+          .lang-switcher {
+            .form-select {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+}
+
+/* Extra small devices (portrait phones, less than 414px) */
+@media screen and (max-width: 413.98px) {
+}
+
+/* Extra small devices (portrait phones, less than 360px) */
+@media screen and (max-width: 359.98px) {
+}

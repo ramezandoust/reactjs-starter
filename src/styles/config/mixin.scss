@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+@mixin smoothScrollbar($bg: #dededebf, $fr: #00000080, $width: 8px, $height: 8px) {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background-color: $bg;
+  }
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    border-radius: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: $fr;
+  }
+}
+
+@mixin defaultText($font: $roboto-mono, $size: 16px, $weight: 500, $line-height: inherit) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin defaultBorder($width: 1px, $style: solid, $color: var(--border-color), $top-left: 12px, $top-right: 12px, $bottom-left: 12px, $bottom-right: 12px) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+  border-radius: $top-left $top-right $bottom-left $bottom-right;
+}
+
+@mixin ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

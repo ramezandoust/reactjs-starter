@@ -1,0 +1,254 @@
+// ant form style
+
+.ant-form-item {
+  .ant-form-item-row {
+    .ant-form-item-label {
+      label {
+        font-size: 1rem;
+        text-transform: capitalize;
+
+        i {
+          padding-inline-start: 0.5rem;
+          color: var(--help-color);
+        }
+      }
+    }
+    .ant-form-item-control {
+      .ant-form-item-control-input {
+        .ant-form-item-control-input-content {
+        }
+      }
+
+      .ant-form-item-explain {
+        color: var(--explain);
+        margin-top: 0.25rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+//input-upload
+.input-upload {
+  width: 100%;
+
+  .ant-upload.ant-upload-select {
+    width: 100%;
+
+    .ant-upload {
+      display: flex;
+      justify-content: space-between;
+      @include defaultBorder($width: 1px, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 18px, $bottom-left: 0px, $bottom-right: 18px);
+
+      .uploadLabel {
+        color: #c5bfbf !important;
+        height: 2rem;
+        width: calc(100% - 8rem);
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        @include defaultText($size: 14px, $weight: 400, $line-height: 2rem);
+      }
+
+      .ant-btn {
+        height: auto;
+        width: 8rem;
+        background-color: var(--primary-background-color);
+        color: #ffffff;
+        @include defaultBorder($width: 0, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 17px, $bottom-left: 0px, $bottom-right: 17px);
+        @include defaultText($size: 14px, $weight: 400);
+        text-transform: capitalize;
+      }
+    }
+  }
+  .ant-upload-list {
+    .ant-upload-list-item:hover .ant-upload-list-item-info {
+      background-color: transparent;
+    }
+  }
+}
+
+//ant-input[type="text"]
+.ant-input[type="text"] {
+  height: 2rem;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+
+//ant-input-group
+.ant-input-group {
+  display: flex;
+  justify-content: space-between;
+  @include defaultBorder($width: 1px, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 18px, $bottom-left: 0px, $bottom-right: 18px);
+
+  //checkbox-radio
+  &.checkbox-radio {
+    label {
+      width: 50%;
+      height: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 0 1rem;
+      text-transform: capitalize;
+
+      &:nth-child(2) {
+        background-color: var(--primary-background-color);
+        color: #ffffff;
+        @include defaultBorder($width: 0, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 17px, $bottom-left: 0px, $bottom-right: 17px);
+        margin: 0;
+
+        span {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  //ant-picker
+  .ant-picker {
+    height: 2rem;
+    width: 100%;
+    background: transparent;
+    border: none;
+
+    &-focused {
+      box-shadow: none;
+    }
+
+    .ant-picker-input {
+      flex-direction: row-reverse;
+      height: 100%;
+      width: 100%;
+
+      input {
+        text-align: center;
+      }
+
+      .ant-picker-clear {
+        background: transparent;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: var(--primary-background-color);
+      color: #ffffff;
+
+      @include defaultBorder($width: 0, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 17px, $bottom-left: 0px, $bottom-right: 17px);
+
+      .ant-picker-clear {
+        color: #ffffff;
+      }
+      input {
+        color: #ffffff;
+      }
+      .ant-picker-suffix {
+        color: #ffffff;
+      }
+    }
+  }
+
+  //ant-input-number
+  .ant-input-number {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+
+    &.single-input {
+      width: calc(100% - 8rem);
+    }
+
+    .ant-input-number-handler-wrap {
+      background: transparent;
+    }
+
+    .ant-input-number-input-wrap {
+      height: 100%;
+
+      .ant-input-number-input {
+        height: 2rem;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+      }
+    }
+
+    &.ant-input-number-focused {
+      @include defaultBorder($width: 0, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 0px, $bottom-left: 0px, $bottom-right: 18px);
+    }
+
+    &:nth-child(2) {
+      @include defaultBorder($width: 0px, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 18px, $bottom-left: 0px, $bottom-right: 18px);
+      border-left: 1px solid;
+      border-color: var(--border-color);
+    }
+  }
+
+  //ant-input[type="text"]
+  .ant-input[type="text"] {
+    height: 2rem;
+    width: calc(100% - 8rem);
+    background-color: transparent;
+    border: none;
+    text-align: center;
+  }
+
+  // ant-select
+  .ant-select {
+    height: 2rem;
+    width: calc(100% - 8rem);
+
+    &.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      @include defaultBorder($width: 0, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 0px, $bottom-left: 0px, $bottom-right: 18px);
+    }
+
+    .ant-select-selector {
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      text-align: center;
+
+      .ant-select-selection-overflow {
+        height: 100%;
+
+        .ant-select-selection-overflow-item {
+          .ant-select-selection-item {
+            color: var(--border-color);
+          }
+        }
+      }
+      .ant-select-selection-placeholder {
+        @include defaultText($size: 14px, $weight: 400);
+      }
+    }
+  }
+
+  // ant-btn
+  .ant-btn {
+    height: auto;
+    width: 8rem;
+    background-color: var(--primary-background-color);
+    color: #ffffff;
+    @include defaultBorder($width: 0, $style: solid, $color: var(--border-color), $top-left: 0px, $top-right: 17px, $bottom-left: 0px, $bottom-right: 17px);
+    @include defaultText($size: 14px, $weight: 400);
+    text-transform: capitalize;
+  }
+}
+.ant-upload-list-picture .ant-upload-list-item-name,
+.ant-upload-list-text .ant-upload-list-item-name {
+  color: var(--foreground-color);
+}
+.ant-pagination {
+  color: var(--foreground-color);
+  svg {
+    color: var(--foreground-color);
+  }
+  .ant-pagination-item-active{
+    color: black;
+  }
+}

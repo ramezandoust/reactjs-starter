@@ -1,0 +1,9 @@
+body {
+  @include defaultText($font: $vazirmatn, $line-height: normal);
+  .ant-col-24.ant-form-item-label,
+  .ant-col-xl-24.ant-form-item-label,
+  .ant-form-vertical .ant-form-item-label {
+    text-align: inherit;
+    margin-inline-start: 0.5rem;
+  }
+}
